@@ -85,5 +85,11 @@ namespace JWTWebApiTutorial.Controllers
                 return computedHash.SequenceEqual(passwordHash);
             }
         }
+
+        [HttpGet(Name="GetCurrentUser")]
+        public User GetUser()
+        {
+            return user;
+        }
     }
 }
